@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://CAP_1 __a bumpy start/blocks/RigidBody2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://_miner/miner.tscn" type="PackedScene" id=2]
+[ext_resource path="res://CAP_1 __a bumpy start/a_bumpy_start.tres" type="TileSet" id=3]
+
+[node name="a_bumpy_start" type="Node2D"]
+
+[node name="block" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, 400 )
+
+[node name="TileMap" type="TileMap" parent="block"]
+position = Vector2( -400, -400 )
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 32, 32 )
+collision_use_kinematic = true
+format = 1
+tile_data = PoolIntArray( 262194, 0, 0 )
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 376, 24 )
+scale = Vector2( 0.2, 0.2 )
